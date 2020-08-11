@@ -1,0 +1,32 @@
+{
+  "name": "react-native-expo-network-indicator",
+  "version": "1.0.0",
+  "description": "provides visual information about the network status and useful information about the device's network, such as its IP address, MAC address",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/godrix/react-native-expo-network-indicator.git"
+  },
+  "keywords": [
+    "react-native",
+    "react-native-component",
+    "expo",
+    "network",
+    "mobile",
+    "ios",
+    "android",
+    "status"
+  ],
+  "bugs": {
+    "url": "https://github.com/godrix/react-native-expo-network-indicator/issues"
+  },
+  "homepage": "https://github.com/godrix/react-native-expo-network-indicator#readme",
+  "author": "Carlos Godri",
+  "license": "MIT",
+  "dependencies": {
+    "expo-network": "~2.2.1"
+  }
+}
