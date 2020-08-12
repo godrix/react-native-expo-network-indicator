@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, Animated } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import * as Network from 'expo-network';
 
-interface NetworkStatusProps{
+export interface NetworkStatusProps{
   message?:string;
   color?:string;
   colorText?:string;
@@ -64,6 +64,7 @@ export const NetworkStatus: React.FC<NetworkStatusProps> = ({message='Internet c
     <Animated.View style={{
       position: 'absolute',
       top: 0,
+      zIndex:9999,
       width: '100%',
       height: 80,
       backgroundColor: color,
@@ -76,7 +77,7 @@ export const NetworkStatus: React.FC<NetworkStatusProps> = ({message='Internet c
       }],
     }}>
       <View style={styles.containerInfo}>
-        <MaterialCommunityIcons name="close-network-outline" size={26} color="#ffffff" />
+        <MaterialCommunityIcons name="close-network-outline" size={26} color={colorText} />
         <Text style={{color: colorText, fontSize: 18}}>{message}</Text>
       </View>
     </Animated.View>
