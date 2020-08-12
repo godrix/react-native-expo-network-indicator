@@ -1,4 +1,4 @@
-# React Native Expo Indicator
+# React Native Expo Network Indicator
 
 [![npm version](https://badge.fury.io/js/rn-expo-network-indicator.svg)](https://badge.fury.io/js/rn-expo-network-indicator)
 [![npm downloads](https://img.shields.io/npm/dm/rn-expo-network-indicator.svg?style=flat-square)](https://www.npmjs.com/package/rn-expo-network-indicator)
