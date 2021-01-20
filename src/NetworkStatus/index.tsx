@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { View, Text, StyleSheet, Animated } from 'react-native';
+import { View, Text, StyleSheet, Animated, Platform } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import * as Network from 'expo-network';
 
@@ -62,9 +62,9 @@ export const NetworkStatus: React.FC<NetworkStatusProps> = ({message='Internet c
 
   return (
     <Animated.View style={{
-      position: 'absolute',
+      position: 'relative',
       top: 0,
-      zIndex:9999,
+      zIndex:9999999,
       width: '100%',
       height: 80,
       backgroundColor: color,
@@ -78,7 +78,7 @@ export const NetworkStatus: React.FC<NetworkStatusProps> = ({message='Internet c
     }}>
       <View style={styles.containerInfo}>
         <MaterialCommunityIcons name="close-network-outline" size={26} color={colorText} />
-        <Text style={{color: colorText, fontSize: 18}}>{message}</Text>
+        <Text style={{color: colorText, fontSize: Platform.OS === 'ios' ? 16 : 14}}>{message}</Text>
       </View>
     </Animated.View>
   );
