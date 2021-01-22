@@ -9,11 +9,6 @@ Provides visual information about the network status and useful information abou
 
 ## [View examples on snack.expo.io](https://snack.expo.io/@godrix/8210f0)
 
-#### Platform Compatibility
-| Android Device        | Android Emulator           | IOS Device  | IOS Simulator | Web |
-| ------------- |:-------------:|:-------------:|:-------------:|:-------------:| -----:|
-| ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-
 ## Getting Started
 
 ### Installing
