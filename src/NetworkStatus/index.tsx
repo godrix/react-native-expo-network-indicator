@@ -53,7 +53,7 @@ export const NetworkStatus: React.FC<NetworkStatusProps> = ({message='Internet c
 
   return (
     <Animated.View style={{
-      position: 'relative',
+      position: 'absolute',
       top: 0,
       zIndex:9999999,
       width: '100%',
