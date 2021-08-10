@@ -1,7 +1,7 @@
 {
   "main": "index.js",
   "name": "rn-expo-network-indicator",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "provides visual information about the network status and useful information about the device's network, such as its IP address, MAC address",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
