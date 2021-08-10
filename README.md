@@ -41,7 +41,7 @@ export const App = () => {
 | ```message```       | string         |  Display message                      |Internet connection has been lost!|  
 | ```color```         | string         |  backgroundcolor                      |#FF0000 |
 | ```colorText```     | string         |  text color                           |#FFFFFF |
-| ```icon```          | string         |  Change icon  |alert (```network-strength-off```,```close-network-outline```,```cloud-alert```,```alert-circle```,```alert```)   |
+| ```icon```          |```network-strength-off```,```close-network-outline```,```cloud-alert```,```alert-circle```,```alert```        |  Change icon  |alert |
 
 
 ## 🤝 Contributing
