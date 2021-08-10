@@ -3,11 +3,12 @@ import { View, Text, StyleSheet, Animated, Platform } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import * as Network from 'expo-network';
 
+import { useNetInfo } from '@react-native-community/netinfo';
+
 export interface NetworkStatusProps{
   message?:string;
   color?:string;
   colorText?:string;
-  checkTime?:number;
 }
 
 export async function useNetworkAsync(){
@@ -23,22 +24,12 @@ export async function useNetworkAsync(){
 
 }
 
-export const NetworkStatus: React.FC<NetworkStatusProps> = ({message='Internet connection has been lost!', color='red', colorText='#FFFFFF', checkTime=10000}) => {
+export const NetworkStatus: React.FC<NetworkStatusProps> = ({message='Internet connection has been lost!', color='red', colorText='#FFFFFF'}) => {
   const fadeAnim = useRef(new Animated.Value(0)).current;
-  const [isOnline, setisOnline] = useState<boolean | undefined>(undefined);
-
-  useEffect(() => {
-    const interval = setInterval(async () => {
-      const { isConnected } = await Network.getNetworkStateAsync();
-      setisOnline(prev => prev !== isConnected ? isConnected : prev);
-    }, checkTime);
-    return () => {
-      clearInterval(interval)
-    }
-  }, []);
+  const { isConnected } = useNetInfo();
 
   useEffect(()=>{
-    if(!isOnline && isOnline !== undefined){
+    if(!isConnected){
       Animated.timing(
         fadeAnim,
         {
@@ -58,7 +49,7 @@ export const NetworkStatus: React.FC<NetworkStatusProps> = ({message='Internet c
       ).start();
     }
 
-    },[isOnline]);
+    },[isConnected]);
 
   return (
     <Animated.View style={{
