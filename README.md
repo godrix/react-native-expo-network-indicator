@@ -27,10 +27,9 @@ import { NetworkStatus } from 'rn-expo-network-indicator';
 
 export const App = () => {
     return (
-        <>
+        <NetworkStatus>
+            <OthersComponents/>
         <NetworkStatus/>
-        <OthersComponents/>
-        </>
     );
 };
 ```
@@ -42,7 +41,7 @@ export const App = () => {
 | ```message```       | string         |  Display message                      |Internet connection has been lost!|  
 | ```color```         | string         |  backgroundcolor                      |#FF0000 |
 | ```colorText```     | string         |  text color                           |#FFFFFF |
-| ```checkTime```     | number         |  verification period in milliseconds  |10000   |
+| ```icon```          | string         |  Change icon  |alert (```network-strength-off```,```close-network-outline```,```cloud-alert```,```alert-circle```,```alert```)   |
 
 
 ## 🤝 Contributing
