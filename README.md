@@ -46,7 +46,7 @@ export const App = () => {
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/godrix/flexblog/issues).
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/godrix/react-native-expo-network-indicator/issues).
 - Make a fork;
 - Create a branck with your feature: `git checkout -b my-feature`;
 - Commit changes: `git commit -m 'feat: My new feature'`;
